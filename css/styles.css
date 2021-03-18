@@ -36,7 +36,16 @@ img {
 .current a {
   color: var(--accent-color);
 }
-
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 /* переменные */
 :root {
   --primary-text-color: #757575;
@@ -72,13 +81,14 @@ body {
 /* logo */
 .logo,
 .logo-down {
-  margin-right: 93px;
-
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+.logo {
+  margin-right: 93px;
 }
 .logo-first,
 .logo-end-first {
@@ -162,6 +172,8 @@ body {
   padding-top: 94px;
 }
 .features-list-title {
+  margin-bottom: 10px;
+
   color: var(--secondary-color);
   font-weight: 700;
   font-size: 14px;
@@ -186,7 +198,7 @@ body {
   margin-bottom: 50px;
 
   color: var(--secondary-color);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -202,6 +214,7 @@ body {
 /* Team */
 .team {
   padding-bottom: 94px;
+  padding-top: 94px;
 
   font-weight: 400;
   font-size: 16px;
@@ -212,7 +225,6 @@ body {
 }
 .team-list-item {
   width: calc((100% - 3 * 30px) / 4);
-  padding-bottom: 30px;
 
   background-color: var(--primary-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -223,13 +235,16 @@ body {
   margin-right: 30px;
 }
 .team-list-title {
-  margin-top: 30px;
-  margin-bottom: 10px;
-
   color: var(--secondary-color);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.03em;
+}
+.team-list-item-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 /* Footer */
@@ -260,6 +275,8 @@ body {
 }
 /* ПОРТФОЛИО */
 .gallery {
+  padding-top: 94px;
+
   font-size: 16px;
   line-height: 1.88;
 }
@@ -290,14 +307,13 @@ body {
 
 /* Gallery */
 .buttons-list {
-  padding-top: 94px;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .buttons-list .buttons-list-item:not(:last-child) {
   margin-right: 8px;
 }
 .gallery-list {
-  padding-top: 34px;
   padding-bottom: 94px;
 }
 .gallery-list-item {
@@ -311,13 +327,11 @@ body {
 .gallery-list-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.gallery-list-title {
+.gallery-list-item-text {
   padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 24px;
-}
-.gallery-list p {
-  padding-top: 4px;
-  padding-left: 24px;
+  padding-right: 24px;
 }
 /* section * {
   outline: 1px solid tomato;
