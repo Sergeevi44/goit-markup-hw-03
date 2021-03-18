@@ -164,8 +164,13 @@ body {
 }
 
 /* Projects */
+.projects {
+  padding-top: 94px;
+}
 .projects-title,
 .team-title {
+  margin-bottom: 50px;
+
   color: var(--secondary-color);
   font-weight: 900;
   font-size: 36px;
@@ -173,6 +178,13 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.projects-list-item {
+  width: calc((100% - 2 * 30px) / 3);
+}
+.projects-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Team */
 .team {
   font-weight: 400;
