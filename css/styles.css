@@ -145,6 +145,9 @@ body {
   background-color: var(--accent-color);
 }
 /* Features */
+.features {
+  padding-top: 94px;
+}
 .features-list-title {
   color: var(--secondary-color);
   font-weight: 700;
